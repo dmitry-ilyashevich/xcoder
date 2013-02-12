@@ -13,11 +13,16 @@ module Xcode
     #       defaultConfigurationIsVisible = 0;
     #       defaultConfigurationName = Release;
     #     };
-    def self.configration_list
+    def self.configuration_list
       { 'isa' => 'XCConfigurationList',
         'buildConfigurations' => [],
         'defaultConfigurationIsVisible' => '0',
         'defaultConfigurationName' => '' }
+    end
+
+    # To support old versions
+    class << self
+      alias :configration_list :configuration_list
     end
     
     #
